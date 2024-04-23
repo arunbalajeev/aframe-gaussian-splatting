@@ -2,10 +2,16 @@
 <html>
   <head>
     <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.2.0/dist/aframe-extras.min.js"></script>
     <script src="./index.js"></script>
   </head>
   <body>
     <a-scene renderer="antialias: false" stats>
+      <a-entity id="rig"
+          movement-controls="controls: keyboard,gamepad,nipple; speed: 0.4; fly: true"
+          nipple-controls="mode: static; lookJoystickPosition: left; moveJoystickPosition: right">
+        <a-entity camera position="10.132 1.6 7.237" look-controls="enabled: true"></a-entity>
+      </a-entity>
       <a-entity position="0 1.6 -2.0" animation="property: rotation; to: 0 360 0; dur: 10000; easing: linear; loop: true">
         <a-sphere position="0 0 0.5" radius="0.5" color="#EF2D5E"></a-sphere>
         <a-sphere position="0 0 -0.5" radius="0.5" color="#EF2D5E"></a-sphere>
