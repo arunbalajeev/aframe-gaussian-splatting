@@ -9,13 +9,13 @@
       <a-entity id="rig"
           movement-controls="controls: keyboard,gamepad,nipple; speed: 0.4; fly: true"
           nipple-controls="mode: static; lookJoystickPosition: left; moveJoystickPosition: right">
-        <a-entity camera position="2.132 1.6 7.237" look-controls="enabled: true"></a-entity>
+        <a-entity camera position="2.132 -1.6 7.237" look-controls="enabled: true"></a-entity>
       </a-entity>
       <a-entity position="0 1.6 -2.0" animation="property: rotation; to: 0 360 0; dur: 10000; easing: linear; loop: true">
         <a-sphere position="0 0 0.5" radius="0.5" color="#EF2D5E"></a-sphere>
         <a-sphere position="0 0 -0.5" radius="0.5" color="#EF2D5E"></a-sphere>
       </a-entity>
-      <a-entity camera position="2.132 1.6 7.237" wasd-controls look-controls ></a-entity>
+      <a-entity camera position="2.132 -1.6 7.237" wasd-controls look-controls ></a-entity>
       <a-box id="cutout-box" visible="false" scale="4.17 2.95 3.89" position="0.8145 1.73322 -2.35981"></a-box>
       
       <a-entity gaussian_splatting="src: https://huggingface.co/arunbalajeev/3dgs_viewer/resolve/main/vkitti_scene18_3view_absdepth.splat; cutoutEntity: #cutout-box" scale="2 2 2" rotation="0 0 0" position="0 0.8 -2"></a-entity>
