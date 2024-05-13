@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.2.0/dist/aframe-extras.min.js"></script>
+    <script src="./index.js"></script>
+  </head>
+  <body>
+    <a-scene renderer="antialias: false" stats>
+      <a-entity id="rig"
+          movement-controls="controls: keyboard,gamepad,nipple; speed: 0.4; fly: true"
+          nipple-controls="mode: static; lookJoystickPosition: left; moveJoystickPosition: right">
+        <a-entity camera position="10.132 1.6 -3.537" look-controls="enabled: true"></a-entity>
+      </a-entity>
+      <a-entity position="0 1.6 -2.0" animation="property: rotation; to: 0 360 0; dur: 10000; easing: linear; loop: true">
+        <a-sphere position="0 0 0.5" radius="0.5" color="#EF2D5E"></a-sphere>
+        <a-sphere position="0 0 -0.5" radius="0.5" color="#EF2D5E"></a-sphere>
+      </a-entity>
+      <a-entity camera position="10.132 1.6 -3.537" wasd-controls look-controls ></a-entity>
+      <a-box id="cutout-box" visible="false" scale="4.17 2.95 3.89" position="0.8145 1.73322 -2.35981"></a-box>
+      
+      <a-entity gaussian_splatting="src: https://huggingface.co/arunbalajeev/3dgs_viewer/resolve/main/vkitti_scene06_3view_absdepth_pointcloudini_2dgs_isotropicgaussians.splat; cutoutEntity: #cutout-box" scale="2 2 2" rotation="0 0 0" position="0 0.8 -2"></a-entity>
+      <a-entity gaussian_splatting="src: https://huggingface.co/arunbalajeev/3dgs_viewer/resolve/main/vkitti_scene06_3view_absdepth_pointcloudini_2dgs_isotropicgaussians.splat;" scale="2 2 2" rotation="0 0 0" position="10 0.8 -2"></a-entity>
+      <a-sky color="#000"></a-sky>
+    </a-scene>
+  </body>
+</html>
